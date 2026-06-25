@@ -673,21 +673,27 @@ footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t2)}
 @media(max-width:560px){
   .wrap{padding:48px 16px}
   .feat-grid{grid-template-columns:1fr;padding:0 16px 48px}
-  #hero{padding:64px 16px 80px}
+  #hero{padding:56px 16px 18px}
   #education{padding:56px 0}
-  .av-frame{width:clamp(140px,50vw,200px)!important;height:clamp(140px,50vw,200px)!important}
+  .av-frame{width:clamp(110px,32vw,140px)!important;height:clamp(110px,32vw,140px)!important}
+  h1.hname{font-size:clamp(42px,11vw,64px)!important}
+  .h-chip{margin-bottom:10px}
+  .h-type{min-height:36px;margin-bottom:16px}
+  .h-journey{margin-bottom:16px}
   .conn-row{padding:18px 16px}
   .conn-row:hover{padding-left:22px}
   .vi-metrics{grid-template-columns:1fr 1fr}
   .vi-m{padding:16px}
-  .hbtns{flex-direction:column;width:100%;max-width:280px;margin:0 auto}
+  .hbtns{flex-direction:column;width:100%;max-width:100%;margin:0}
   .btn{width:100%;justify-content:center}
   .edu-card{flex-direction:row;align-items:flex-start;gap:14px;padding:20px 16px}
   .edu-logo{width:44px;height:44px;flex-shrink:0}
   .fl{gap:8px}
   .ec-body{padding:14px 16px}
-  .hj-track{gap:0;overflow-x:auto;padding-bottom:8px;justify-content:flex-start;-webkit-overflow-scrolling:touch}
-  .hj-node{min-width:140px;flex-shrink:0}
+  .hj-track{flex-direction:column-reverse;padding-left:20px}
+  .hj-node{padding-bottom:6px}
+  .hj-tag{display:none}
+  .hj-live{display:none}
   .term-hint{display:none}
 }
 
@@ -695,7 +701,7 @@ footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t2)}
 @media(max-width:380px){
   .wrap{padding:40px 12px}
   .feat-grid{padding:0 12px 40px}
-  #hero{padding:56px 12px 72px}
+  #hero{padding:56px 12px 14px}
   .av-frame{width:130px!important;height:130px!important}
   .vi-metrics{grid-template-columns:1fr}
   .vi-m:nth-child(2){border-right:none;border-bottom:.5px solid var(--bd)}
