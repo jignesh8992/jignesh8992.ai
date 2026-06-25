@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Jignesh Patel — CTO, VehicleInfo"/>
 <meta name="twitter:description" content="Built India's #1 vehicle intelligence platform from scratch."/>
-<link rel="icon" href="assets/avatar.jpg" type="image/jpeg"/>
+<link rel="icon" href="assets/avatar.png" type="image/png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -1336,7 +1336,7 @@ const _sc=(function(){
   return {
     run(el){
       const text=el.innerText;const len=text.length;
-      const q=Array.from(text,(ch,i)=>({ch,start:Math.floor(i/len*28),end:Math.floor(i/len*28)+8+Math.floor(Math.random()*14),rc:''}));
+      const q=Array.from(text,(ch,i)=>({ch,start:Math.floor(i/len*16),end:Math.floor(i/len*16)+6+Math.floor(Math.random()*8),rc:''}));
       let frame=0;
       const tick=()=>{
         let out='',done=0;
