@@ -629,9 +629,12 @@ footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t2)}
   .wrap{padding:64px 24px}
   .feat-grid{padding:0 24px 64px}
   .hero-inner{grid-template-columns:1fr;gap:36px;text-align:center}
-  .hero-right{align-items:center}
+  .hero-right{align-items:center;width:100%;max-width:100%;overflow-x:hidden}
+  .h-journey{width:100%;max-width:100%;overflow-x:hidden}
+  .h-type{max-width:100%;word-wrap:break-word;white-space:normal}
   .av-data{display:none}
-  .hj-track{justify-content:center}
+  .hj-track{justify-content:flex-start;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .hj-track::-webkit-scrollbar{display:none}
   .hbtns{justify-content:center}
   .ag{grid-template-columns:1fr;gap:44px}
   .exp-grid{grid-template-columns:1fr 1fr}
