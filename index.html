@@ -615,24 +615,81 @@ footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t2)}
 }
 
 /* ── RESPONSIVE ── */
+
+/* laptop 1200 */
+@media(max-width:1200px){
+  .wrap{padding:72px 32px}
+  .feat-grid{padding:0 32px 72px}
+  .exp-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* tablet landscape / small laptop 900 */
 @media(max-width:900px){
   nav .n-links,nav .n-cta{display:none}
+  .wrap{padding:64px 24px}
+  .feat-grid{padding:0 24px 64px}
   .hero-inner{grid-template-columns:1fr;gap:36px;text-align:center}
   .hero-right{align-items:center}
   .av-data{display:none}
   .hj-track{justify-content:center}
   .hbtns{justify-content:center}
   .ag{grid-template-columns:1fr;gap:44px}
-  .exp-grid{grid-template-columns:1fr}
+  .exp-grid{grid-template-columns:1fr 1fr}
   .feat-grid{grid-template-columns:1fr 1fr}
   .vi-metrics{grid-template-columns:1fr 1fr}
   .vi-m:nth-child(2){border-right:none}
   .vi-m:nth-child(1),.vi-m:nth-child(2){border-bottom:.5px solid var(--bd)}
+  .conn-top{flex-direction:column;gap:16px}
+  .fl{flex-direction:column;gap:12px}
   footer{flex-direction:column;gap:10px;text-align:center}
 }
+
+/* tablet portrait / iPad 768 */
+@media(max-width:768px){
+  .wrap{padding:56px 20px}
+  .feat-grid{padding:0 20px 56px}
+  #hero{padding:72px 20px 88px}
+  #education{padding:72px 0}
+  .exp-grid{grid-template-columns:1fr}
+  .edu-card{padding:24px 20px;gap:16px}
+  .conn-intro{text-align:center}
+  .conn-top{align-items:center}
+  .conn-rows{border-radius:8px}
+  .vi-brand{flex-direction:column;align-items:flex-start;gap:12px}
+  .hj-node{min-width:120px}
+}
+
+/* large phone 560 */
 @media(max-width:560px){
-  .feat-grid{grid-template-columns:1fr}
-  .conn-row{padding:18px 16px}.conn-row:hover{padding-left:22px}
+  .wrap{padding:48px 16px}
+  .feat-grid{grid-template-columns:1fr;padding:0 16px 48px}
+  #hero{padding:64px 16px 80px}
+  #education{padding:56px 0}
+  .conn-row{padding:18px 16px}
+  .conn-row:hover{padding-left:22px}
+  .vi-metrics{grid-template-columns:1fr 1fr}
+  .vi-m{padding:16px}
+  .hbtns{flex-direction:column;width:100%;max-width:280px;margin:0 auto}
+  .btn{width:100%;justify-content:center}
+  .edu-card{flex-direction:column;align-items:flex-start;gap:14px;padding:20px 16px}
+  .fl{gap:8px}
+  .ec-body{padding:14px 16px}
+  .hj-track{gap:0;overflow-x:auto;padding-bottom:8px;justify-content:flex-start;-webkit-overflow-scrolling:touch}
+  .hj-node{min-width:140px;flex-shrink:0}
+}
+
+/* small phone 380 */
+@media(max-width:380px){
+  .wrap{padding:40px 12px}
+  .feat-grid{padding:0 12px 40px}
+  #hero{padding:56px 12px 72px}
+  .vi-metrics{grid-template-columns:1fr}
+  .vi-m:nth-child(2){border-right:none;border-bottom:.5px solid var(--bd)}
+  .vi-m:nth-child(3){border-bottom:.5px solid var(--bd)}
+  .conn-row{padding:14px 12px}
+  .conn-row:hover{padding-left:16px}
+  .edu-card{padding:16px 12px}
+  .ec-ach-n{font-size:18px}
 }
 </style>
 </head>
