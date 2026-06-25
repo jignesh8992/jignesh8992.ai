@@ -1383,6 +1383,9 @@ function updateNav(){let c='';const atBottom=scrollY+innerHeight>=document.body.
 addEventListener('scroll',updateNav,{passive:true});
 updateNav();
 
+/* ── HIDE SCROLL HINT ON SCROLL ── */
+(function(){const h=document.querySelector('.scr-hint');if(!h)return;function hide(){if(scrollY>40){h.style.transition='opacity .4s';h.style.opacity='0';h.style.pointerEvents='none';removeEventListener('scroll',hide);}};addEventListener('scroll',hide,{passive:true});})();
+
 /* ── BOOT SEQUENCE ── */
 (function(){
   const LINES=[
