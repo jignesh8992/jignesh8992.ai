@@ -1336,7 +1336,7 @@ const _sc=(function(){
   return {
     run(el){
       const text=el.innerText;const len=text.length;
-      const q=Array.from(text,(ch,i)=>({ch,start:Math.floor(i/len*50),end:Math.floor(i/len*50)+12+Math.floor(Math.random()*28),rc:''}));
+      const q=Array.from(text,(ch,i)=>({ch,start:Math.floor(i/len*28),end:Math.floor(i/len*28)+8+Math.floor(Math.random()*14),rc:''}));
       let frame=0;
       const tick=()=>{
         let out='',done=0;
