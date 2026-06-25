@@ -675,25 +675,33 @@ footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t2)}
   .feat-grid{grid-template-columns:1fr;padding:0 16px 48px}
   #hero{padding:56px 16px 18px}
   #education{padding:56px 0}
-  .av-frame{width:clamp(110px,32vw,140px)!important;height:clamp(110px,32vw,140px)!important}
-  h1.hname{font-size:clamp(42px,11vw,64px)!important}
-  .h-chip{margin-bottom:10px}
-  .h-type{min-height:36px;margin-bottom:16px}
-  .h-journey{margin-bottom:16px}
+  .av-frame{width:90px!important;height:90px!important}
+  h1.hname{font-size:36px!important;white-space:nowrap;line-height:1.1}
+  h1.hname br{display:none}
+  .h-chip{margin-bottom:8px}
+  .h-type{min-height:32px;margin-bottom:12px;font-size:13px}
+  .h-journey{margin-bottom:12px}
+  .hj-lbl{margin-bottom:8px}
   .conn-row{padding:18px 16px}
   .conn-row:hover{padding-left:22px}
   .vi-metrics{grid-template-columns:1fr 1fr}
   .vi-m{padding:16px}
-  .hbtns{flex-direction:column;width:100%;max-width:100%;margin:0}
-  .btn{width:100%;justify-content:center}
+  .hbtns{flex-direction:row;width:100%;gap:8px}
+  .btn{flex:1;justify-content:center;padding:10px 12px;font-size:12px}
   .edu-card{flex-direction:row;align-items:flex-start;gap:14px;padding:20px 16px}
   .edu-logo{width:44px;height:44px;flex-shrink:0}
   .fl{gap:8px}
   .ec-body{padding:14px 16px}
-  .hj-track{flex-direction:column-reverse;padding-left:20px}
-  .hj-node{padding-bottom:6px}
+  .hj-track{flex-direction:row-reverse;overflow:hidden;padding-left:0;border-left:none;width:100%}
+  .hj-node{flex:1;min-width:0;padding-bottom:0;position:relative}
+  .hj-node::before{display:none}
+  .hj-card{padding:7px 8px;min-width:0}
+  .hj-yr{font-size:7px;padding:1px 5px;margin-bottom:5px}
+  .hj-role{font-size:9px}
+  .hj-co{font-size:7px}
   .hj-tag{display:none}
   .hj-live{display:none}
+  .hj-line{min-width:8px;flex:0 0 8px}
   .term-hint{display:none}
 }
 
@@ -915,7 +923,7 @@ footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t2)}
     <!-- Text -->
     <div class="hero-right">
       <div class="h-chip"><span class="chip-dot"></span>CTO · VehicleInfo · Building India's Vehicle OS</div>
-      <h1 class="hname" data-text="Jignesh&#10;Patel">Jignesh<br/>Patel</h1>
+      <h1 class="hname" data-text="Jignesh&#10;Patel">Jignesh <br/>Patel</h1>
       <p class="h-role">CTO · <span>VehicleInfo</span></p>
       <div class="h-type"><span id="typetext"></span><span class="cursor"></span></div>
 
