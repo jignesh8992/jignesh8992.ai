@@ -1503,6 +1503,28 @@ updateNav();
 /* ── HIDE SCROLL HINT ON SCROLL ── */
 (function(){const h=document.querySelector('.scr-hint');if(!h)return;function hide(){if(scrollY>40){h.style.transition='opacity .4s';h.style.opacity='0';h.style.pointerEvents='none';removeEventListener('scroll',hide);}};addEventListener('scroll',hide,{passive:true});})();
 
+/* ── APPLE-STYLE HERO SCROLL HANDOFF + PARALLAX (desktop only) ── */
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const inner=document.querySelector('.hero-inner');
+  const av=document.querySelector('.av-frame');
+  if(reduce||!inner)return;
+  let ticking=false,H=innerHeight;
+  addEventListener('resize',()=>{H=innerHeight;},{passive:true});
+  function apply(){
+    ticking=false;
+    if(innerWidth<=900){inner.style.transform='';inner.style.opacity='';if(av)av.style.transform='';return;}
+    const y=scrollY;
+    if(y>H){return;}                     /* hero gone — stop work */
+    const p=Math.min(y/H,1);
+    inner.style.transform='translateY('+(y*0.14).toFixed(1)+'px)';
+    inner.style.opacity=(1-p*0.9).toFixed(3);
+    if(av)av.style.transform='translateY('+(y*-0.05).toFixed(1)+'px)';  /* subtle foreground lag = depth */
+  }
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(apply);}},{passive:true});
+  apply();
+})();
+
 /* ── BOOT SEQUENCE ── */
 (function(){
   const LINES=[
